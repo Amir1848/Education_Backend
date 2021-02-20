@@ -1,0 +1,56 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses\\Microservices.Courses.csproj": {}
+  },
+  "projects": {
+    "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses\\Microservices.Courses.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses\\Microservices.Courses.csproj",
+        "projectName": "Microservices.Courses",
+        "projectPath": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses\\Microservices.Courses.csproj",
+        "packagesPath": "C:\\Users\\Hesari\\.nuget\\packages\\",
+        "outputPath": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hesari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net50"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net50": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net50": {
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

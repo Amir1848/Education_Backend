@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Test\\Microservices.Courses.Test\\Microservices.Courses.Test.csproj": {}
+  },
+  "projects": {
+    "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Test\\Microservices.Courses.Test\\Microservices.Courses.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Test\\Microservices.Courses.Test\\Microservices.Courses.Test.csproj",
+        "projectName": "Microservices.Courses.Test",
+        "projectPath": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Test\\Microservices.Courses.Test\\Microservices.Courses.Test.csproj",
+        "packagesPath": "C:\\Users\\Hesari\\.nuget\\packages\\",
+        "outputPath": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Test\\Microservices.Courses.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hesari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net50"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net50": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net50": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices.Courses", "Microservices.Courses", "{AD158D34-CEEF-4C69-9517-3EAA5B3B7F00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Courses", "Microservices.Courses\Microservices.Courses\Microservices.Courses.csproj", "{D9A16CD3-BE78-40B9-A55A-50B40D6DE4D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Courses.DataLayer", "Microservices.Courses\Microservices.Courses.DataLayer\Microservices.Courses.DataLayer\Microservices.Courses.DataLayer.csproj", "{D2879DCE-59DE-40B6-9DB8-311EF326C6B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Courses.Services", "Microservices.Courses\Microservices.Courses.Services\Microservices.Courses.Services\Microservices.Courses.Services.csproj", "{BBD23740-317F-4F85-8760-EF3E3C50ADBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Courses.Test", "Microservices.Courses\Microservices.Courses.Test\Microservices.Courses.Test\Microservices.Courses.Test.csproj", "{892DF03B-7C17-4230-A003-C14ECD3F65F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9A16CD3-BE78-40B9-A55A-50B40D6DE4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A16CD3-BE78-40B9-A55A-50B40D6DE4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A16CD3-BE78-40B9-A55A-50B40D6DE4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A16CD3-BE78-40B9-A55A-50B40D6DE4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2879DCE-59DE-40B6-9DB8-311EF326C6B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2879DCE-59DE-40B6-9DB8-311EF326C6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2879DCE-59DE-40B6-9DB8-311EF326C6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2879DCE-59DE-40B6-9DB8-311EF326C6B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD23740-317F-4F85-8760-EF3E3C50ADBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD23740-317F-4F85-8760-EF3E3C50ADBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD23740-317F-4F85-8760-EF3E3C50ADBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD23740-317F-4F85-8760-EF3E3C50ADBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892DF03B-7C17-4230-A003-C14ECD3F65F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892DF03B-7C17-4230-A003-C14ECD3F65F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892DF03B-7C17-4230-A003-C14ECD3F65F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892DF03B-7C17-4230-A003-C14ECD3F65F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9A16CD3-BE78-40B9-A55A-50B40D6DE4D8} = {AD158D34-CEEF-4C69-9517-3EAA5B3B7F00}
+		{D2879DCE-59DE-40B6-9DB8-311EF326C6B2} = {AD158D34-CEEF-4C69-9517-3EAA5B3B7F00}
+		{BBD23740-317F-4F85-8760-EF3E3C50ADBE} = {AD158D34-CEEF-4C69-9517-3EAA5B3B7F00}
+		{892DF03B-7C17-4230-A003-C14ECD3F65F4} = {AD158D34-CEEF-4C69-9517-3EAA5B3B7F00}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BD7AA55-0956-4376-B2BF-DF079CFF447E}
+	EndGlobalSection
+EndGlobal

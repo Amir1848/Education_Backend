@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microservices.Courses.DataLayer.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Microservices.Courses
 {
@@ -32,6 +34,10 @@ namespace Microservices.Courses
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservices.Courses", Version = "v1" });
             });
+
+            services.AddDbContext<CourseDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("SQLSERVER"))
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

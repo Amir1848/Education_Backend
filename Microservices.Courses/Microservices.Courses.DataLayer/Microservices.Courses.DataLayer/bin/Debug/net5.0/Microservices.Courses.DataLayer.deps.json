@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Microservices.Courses.DataLayer/1.0.0": {
+        "runtime": {
+          "Microservices.Courses.DataLayer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microservices.Courses.DataLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1611,6 +1611,19 @@
         "runtime": {
           "bin/placeholder/Microservices.Courses.DataLayer.dll": {}
         }
+      },
+      "Microservices.Courses.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microservices.Courses.DataLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Microservices.Courses.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microservices.Courses.Services.dll": {}
+        }
       }
     }
   },
@@ -5981,11 +5994,17 @@
       "type": "project",
       "path": "../Microservices.Courses.DataLayer/Microservices.Courses.DataLayer/Microservices.Courses.DataLayer.csproj",
       "msbuildProject": "../Microservices.Courses.DataLayer/Microservices.Courses.DataLayer/Microservices.Courses.DataLayer.csproj"
+    },
+    "Microservices.Courses.Services/1.0.0": {
+      "type": "project",
+      "path": "../Microservices.Courses.Services/Microservices.Courses.Services/Microservices.Courses.Services.csproj",
+      "msbuildProject": "../Microservices.Courses.Services/Microservices.Courses.Services/Microservices.Courses.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microservices.Courses.DataLayer >= 1.0.0",
+      "Microservices.Courses.Services >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
@@ -6021,6 +6040,9 @@
           "projectReferences": {
             "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.DataLayer\\Microservices.Courses.DataLayer\\Microservices.Courses.DataLayer.csproj": {
               "projectPath": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.DataLayer\\Microservices.Courses.DataLayer\\Microservices.Courses.DataLayer.csproj"
+            },
+            "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Services\\Microservices.Courses.Services\\Microservices.Courses.Services.csproj": {
+              "projectPath": "D:\\MyEducationProject\\Backend\\Education_Backend\\Microservices.Courses\\Microservices.Courses.Services\\Microservices.Courses.Services\\Microservices.Courses.Services.csproj"
             }
           }
         }

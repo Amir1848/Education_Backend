@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Microservices.Courses.DataLayer\Microservices.Courses.DataLayer\Microservices.Courses.DataLayer.csproj" />
+    <ProjectReference Include="..\Microservices.Courses.Services\Microservices.Courses.Services\Microservices.Courses.Services.csproj" />
   </ItemGroup>
 
 </Project>

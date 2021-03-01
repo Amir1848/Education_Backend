@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/weatherforecast/Get",
+      "DownstreamPathTemplate": "/api/Course/CreateCourse",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,19 +9,7 @@
           "Port": 5010
         }
       ],
-      "UpstreamPathTemplate": "/api/weather",
-      "UpstreamHttpMethod": [ "GET" ]
-    },
-    {
-      "DownstreamPathTemplate": "/api/weatherforecast/CreateWeather",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5010
-        }
-      ],
-      "UpstreamPathTemplate": "/api/CreateWeather",
+      "UpstreamPathTemplate": "/Course/CreateCourse",
       "UpstreamHttpMethod": [ "Post" ]
     }
   ],

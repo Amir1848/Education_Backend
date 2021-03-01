@@ -18,5 +18,11 @@ namespace Microservices.Courses.DataLayer.Context
         public DbSet<Group> Groups { get; set; }
         public DbSet<StudentCourse> StudentCourses { get; set; }
         public DbSet<TeacherCourse> TeacherCourses { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Course>()
+                .HasQueryFilter(b => b.Active);
+        }
     }
 }

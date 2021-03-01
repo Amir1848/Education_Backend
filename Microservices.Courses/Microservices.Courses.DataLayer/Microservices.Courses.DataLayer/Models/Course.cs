@@ -20,6 +20,7 @@ namespace Microservices.Courses.DataLayer.Models
         public DateTime CreateDate { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public bool Active { get; set; } = true;
         [Required]
         public long GroupId { get; set; }
 

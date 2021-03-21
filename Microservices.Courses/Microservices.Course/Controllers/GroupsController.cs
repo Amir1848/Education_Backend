@@ -24,18 +24,22 @@ namespace Microservices.Courses.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return new JsonResult(ModelState);
+                return StatusCode(478);
             }
-            return new JsonResult(await _groupService.CreateGroup(model));
-        }
-        [HttpPost]
-        public async Task<IActionResult> RemoveGroup([FromRoute]long id)
-        {
-            if(id != 0)
+            if(await _groupService.CreateGroup(model))
             {
-                return new JsonResult(await _groupService.RemoveGroup(id));
+                return StatusCode(201);
             }
-            return new JsonResult("Please write the value of id");
+            return StatusCode(478);
+        }
+        [HttpPost("{id}")]
+        public async Task<IActionResult> RemoveGroup(long id)
+        {
+            if (await _groupService.RemoveGroup(id))
+            {
+                return StatusCode(204);
+            }
+            return StatusCode(478);
         }
         [HttpGet]
         public async Task<IActionResult> GetGroups()

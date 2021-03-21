@@ -64,6 +64,19 @@
       "UpstreamPathTemplate": "/Course/DeleteCourse/{everything}",
       "UpstreamHttpMethod": [ "Delete" ],
       "SwaggerKey": "Courses"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Groups/RemoveGroup/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/Groups/RemoveGroup/{everything}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "Courses"
     }
   ],
   "GlobalConfiguration": {

@@ -1,7 +1,9 @@
-﻿using Microservices.Courses.DataLayer.Context;
+﻿using Dapper;
+using Microservices.Courses.DataLayer.Context;
 using Microservices.Courses.DataLayer.Models;
 using Microservices.Courses.Services.Dtos;
 using Microservices.Courses.Services.Interfaces;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,10 +15,11 @@ namespace Microservices.Courses.Services.Services
 {
     public class GroupService : IGroupService
     {
-        private readonly CourseDbContext _db;
-        public GroupService(CourseDbContext db)
+        private readonly SqlConnection _db;
+        public GroupService(SqlConnection db)
         {
             _db = db;
+            _db.Open();
         }
 
 
@@ -24,15 +27,10 @@ namespace Microservices.Courses.Services.Services
         {
             try
             {
-                Group group = new Group
-                {
-                    Name = model.Name,
-                    Description = model.Description
-                };
-
-                await _db.Groups.AddAsync(group);
-                await _db.SaveChangesAsync();
-            }catch(Exception exp)
+                string GroupId = model.GroupId == 0 ? "NULL" : $"{model.GroupId}";
+                await _db.QueryAsync($"insert into Groups values (N'{model.Name}',N'{model.Description}',1,{GroupId})");
+            }
+            catch (Exception exp)
             {
                 return false;
             }
@@ -41,27 +39,16 @@ namespace Microservices.Courses.Services.Services
 
         public async Task<List<GroupDto>> GetGroups()
         {
-            return await _db.Groups.Select(p => new GroupDto()
-            {
-                Description = p.Description,
-                Id = p.Id,
-                Name = p.Name
-            }).ToListAsync();
+            return _db.QueryAsync<GroupDto>("Exec SP_GetGroups").Result.ToList();
         }
 
         public async Task<bool> RemoveGroup(long id)
         {
-            var item = await _db.Groups.FindAsync(id);
-            if(item == null)
-            {
-                return false;
-            }
             try
             {
-                item.Active = false;
-                await _db.SaveChangesAsync();
-            }
-            catch(Exception exp)
+                await _db.QueryAsync($"Exec SP_RemoveGroup {id}");
+            }   
+            catch (Exception exp)
             {
                 return false;
             }

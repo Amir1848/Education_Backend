@@ -14,5 +14,6 @@ namespace Microservices.Courses.Services.Dtos
         public string Name { get; set; }
         [MaxLength(1500)]
         public string Description { get; set; }
+        public long GroupId { get; set; }
     }
 }

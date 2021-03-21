@@ -4,6 +4,7 @@ using Microservices.Courses.Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,6 +38,7 @@ namespace Microservices.Course
             services.AddScoped<ICourseServices, CourseService>();
             services.AddScoped<IGroupService, GroupService>();
 
+            services.AddScoped<SqlConnection>(x => new SqlConnection(Configuration.GetConnectionString("SQLSERVER2016")));
 
             services.AddSwaggerGen();
         }

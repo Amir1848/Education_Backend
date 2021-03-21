@@ -38,6 +38,32 @@
       "UpstreamPathTemplate": "/Group/GetGroups",
       "UpstreamHttpMethod": [ "Get" ],
       "SwaggerKey": "Courses"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Course/CreateCourse",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/Course/CreateCourse",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "Courses"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Course/DeleteCourse/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/Course/DeleteCourse/{everything}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "SwaggerKey": "Courses"
     }
   ],
   "GlobalConfiguration": {

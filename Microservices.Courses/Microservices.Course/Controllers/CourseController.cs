@@ -24,9 +24,29 @@ namespace Microservices.Courses.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+                if(await _courseService.CreateCourse(model))
+                {
+                    return StatusCode(201);
+                }
+                else
+                {
+                    return StatusCode(478);
+                }
             }
-            return new JsonResult(model);
+            return StatusCode(478);
+        }
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> DeleteCourse(long Id)
+        {
+            if(await _courseService.RemoveCourse(Id))
+            {
+                return StatusCode(204);
+            }
+            else
+            {
+                return StatusCode(478);
+            }
         }
 
     }

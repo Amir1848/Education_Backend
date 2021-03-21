@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Microservices.Courses.DataLayer.Migrations
 {
     [DbContext(typeof(CourseDbContext))]
-    [Migration("20210301160519_t2")]
-    partial class t2
+    [Migration("20210301200631_t3")]
+    partial class t3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -65,6 +65,9 @@ namespace Microservices.Courses.DataLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Description")
                         .HasMaxLength(1500)

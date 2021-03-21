@@ -64,6 +64,9 @@ namespace Microservices.Courses.DataLayer.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Description")
                         .HasMaxLength(1500)
                         .HasColumnType("nvarchar(1500)");

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Microservices.Courses.DataLayer.Migrations
 {
-    public partial class t1 : Migration
+    public partial class t3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,6 +15,7 @@ namespace Microservices.Courses.DataLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(1500)", maxLength: 1500, nullable: true),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
                     GroupId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
@@ -39,6 +40,7 @@ namespace Microservices.Courses.DataLayer.Migrations
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
                     GroupId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>

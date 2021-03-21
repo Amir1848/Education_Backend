@@ -1,5 +1,6 @@
 ﻿using Microservices.Courses.DataLayer.Models;
 using Microservices.Courses.Services.Dtos;
+using Microservices.Courses.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,7 +14,11 @@ namespace Microservices.Courses.Controllers
     [ApiController]
     public class GroupsController : ControllerBase
     {
-
+        private readonly IGroupService _groupService;
+        public GroupsController(IGroupService groupService)
+        {
+            _groupService = groupService;
+        }
         [HttpPost]
         public async Task<IActionResult> CreateGroup(CreateGroupDto model)
         {
@@ -21,8 +26,22 @@ namespace Microservices.Courses.Controllers
             {
                 return new JsonResult(ModelState);
             }
-            
-        } 
+            return new JsonResult(await _groupService.CreateGroup(model));
+        }
+        [HttpPost]
+        public async Task<IActionResult> RemoveGroup([FromRoute]long id)
+        {
+            if(id != 0)
+            {
+                return new JsonResult(await _groupService.RemoveGroup(id));
+            }
+            return new JsonResult("Please write the value of id");
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetGroups()
+        {
+            return new JsonResult(await _groupService.GetGroups());
+        }
 
     }
 }

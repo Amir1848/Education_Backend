@@ -41,6 +41,12 @@ namespace Microservices.Course
             services.AddScoped<SqlConnection>(x => new SqlConnection(Configuration.GetConnectionString("SQLSERVER2016")));
 
             services.AddSwaggerGen();
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +58,7 @@ namespace Microservices.Course
             }
 
             app.UseSwagger();
-
+            app.UseCors("MyPolicy");
 
             app.UseSwaggerUI(c =>
             {
